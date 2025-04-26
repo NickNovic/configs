@@ -204,3 +204,6 @@ gaps outer 3
 
 # Set wallpapers
 exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
+
+# Removing window titles
+for_window [class="."] border pixel 1
