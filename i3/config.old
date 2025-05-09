@@ -35,23 +35,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Colors (Gruxbox)
-# Gruvbox colors
-# set $bg_color #282828
-# set $fg_color #ebdbb2
-# set $inactive_bg #3c3836
-# set $inactive_fg #a89984
-# set $border_normal #928374
-# set $border_focus #d79921
-# set $border_urgent #fb4934
-# set $focus_color #d79921
-# set $urgent_color #fb4934
-
-# Set border colors for focused, unfocused, and urgent windows
-# client.focused          $bg_color $fg_color $border_focus
-# client.unfocused        $inactive_bg $inactive_fg $border_normal
-# client.urgent           $urgent_color $fg_color $border_urgent
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -64,10 +47,10 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-# tiling_drag modifier titlebar
+tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec terminator 
+bindsym $mod+Return exec konsole 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -206,15 +189,6 @@ bindsym $mod+r mode "resize"
 bar {
     position top 
     status_command i3blocks 
-    status_command i3status
-    colors {
-        # background $bg_color
-        # statusline $fg_color
-        # separator  $border_normal
-        # focused_workspace  $fg_color $bg_color $focus_color
-        # inactive_workspace $inactive_fg $inactive_bg $border_normal
-        # urgent_workspace   $fg_color $bg_color $urgent_color
-    }
 }
 
 # Setting keyboard layout and it's switch keybind
@@ -233,6 +207,3 @@ exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg
 
 # Removing window titles
 for_window [class="."] border pixel 1
-
-# Fixing rotation of cursor 
-exec_always --no-startup-id xsetroot -cursor_name left_ptr
