@@ -25,7 +25,6 @@ cd ~/dotfiles
 ```bash
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ln -s ~/dotfiles/i3 ~/.config/i3
-# Add other symlinks as needed
 ```
 
 ### 3. Install Required Packages
