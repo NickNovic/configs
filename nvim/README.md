@@ -1,8 +1,3 @@
-Here's a **simple `README.md`** with all commands to install the required dependencies on **Debian**:
-
----
-
-````markdown
 # Neovim Plugin Dependencies (Debian)
 
 This README lists the required dependencies for the following Neovim plugins:
