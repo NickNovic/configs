@@ -50,7 +50,10 @@ sudo ln -s /usr/bin/clangd-XX /usr/bin/clangd
 sudo apt install ripgrep fd-find
 ```
 
-Create `fd` symlink if needed:
+### 4. Search tools for Telescope
+
+```bash
+sudo apt install xclip 
 
 ```bash
 mkdir -p ~/.local/bin
